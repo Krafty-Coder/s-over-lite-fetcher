@@ -1,0 +1,50 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: #444;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+li {
+  width: 100%;
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+
+}
+
+@media screen and (max-width: 900px) {
+  ul {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+  }
+  ul li a {
+    float: left;
+    padding: 15px;
+
+  }
+  div.content {margin-left: 0;}
+
+}
