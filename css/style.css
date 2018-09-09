@@ -1,0 +1,120 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: #444;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+li {
+  width: 100%;
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+
+}
+
+@media screen and (max-width: 900px) {
+  ul {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+  }
+  ul li a {
+    float: left;
+    padding: 15px;
+
+  }
+  div.content {margin-left: 0;}
+
+}
+
+/*-------------end of navbar--------------------*/
+
+
+/*---------start of hero section----------------*/
+
+#hero {
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top:0;
+  padding: 0;
+  margin: auto;
+  background-size: cover;
+  background-image: linear-gradient(rgba(34, 33, 33, 0.9), rgba(34, 33, 33, 0.9)), url(../img/hero.jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+span.one {
+  width: 40%;
+  opacity: 0.8;
+  border-radius: 2em;
+  background-color: #111;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+a {
+  color: blue;
+}
+
+.buttons {
+  margin: auto;
+  padding: 1em;
+}
+
+.buttons button {
+  background: #000;
+  border-color: #0100fa;
+  width: 7em;
+  height: 2em;
+  font-family: inherit;
+  color: #794;
+}
+
+.one p {
+  margin: auto;
+  width: 40%;
+  color: white;
+  padding: 1em;
+}
+
+p.top {
+  padding-top: 1.7em;
+}
+
+@media screen and (max-width: 900px) {
+  #hero {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+
+
+
