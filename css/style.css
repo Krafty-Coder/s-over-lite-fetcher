@@ -48,3 +48,92 @@ li a:hover {
   div.content {margin-left: 0;}
 
 }
+
+/*-------------end of navbar--------------------*/
+
+
+/*---------start of hero section----------------*/
+
+#hero {
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top:0;
+  padding: 0;
+  margin: auto;
+  background-size: cover;
+  background-image: linear-gradient(rgba(34, 33, 33, 0.9), rgba(34, 33, 33, 0.9)), url(../img/hero.jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+span.one {
+  width: 40%;
+  opacity: 0.8;
+  border-radius: 2em;
+  background-color: #111;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+a {
+  color: blue;
+}
+
+.buttons {
+  margin: auto;
+  padding: 1em;
+}
+
+.buttons button {
+  background: #000;
+  border-color: #0100fa;
+  width: 7em;
+  height: 2em;
+  font-family: inherit;
+  color: #794;
+}
+
+.one p {
+  margin: auto;
+  width: 40%;
+  color: white;
+  padding: 1em;
+}
+
+p.top {
+  padding-top: 1.7em;
+}
+
+@media screen and (max-width: 900px) {
+  #hero {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/*------start of dashboard -------*/
+
+#section {
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top:0;
+  padding-left:2em;
+  margin: auto;
+}
+
+.questions {
+  padding: 2em;
+}
+
+.questions:nth-child(even) {
+  background: #f1f1f1;
+  border-radius: 1em;
+}
+
+
+
