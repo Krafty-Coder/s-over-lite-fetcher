@@ -159,5 +159,25 @@ p.top {
   border-radius: 1em;
 }
 
+/*----- login section -------*/
+
+#section #login {
+  padding-right: 20%;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  height: 100vh;
+}
+
+form {
+  flex-basis: 30%;
+}
+
+
 
 
