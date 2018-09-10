@@ -161,11 +161,11 @@ p.top {
 
 /*----- login section -------*/
 
-#section #login {
+#section #form {
   padding-right: 20%;
 }
 
-#login {
+#form {
   display: flex;
   flex-direction: column;
   justify-content: center;
