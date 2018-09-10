@@ -1,5 +1,6 @@
 ul {
   list-style-type: none;
+  z-index: 9999;
   margin: 0;
   padding: 0;
   width: 20%;
@@ -35,15 +36,29 @@ li a:hover {
 
 @media screen and (max-width: 900px) {
   ul {
+    list-style-type: none;
+    margin: 0;
     width: 100%;
-    height: auto;
-    position: relative;
+    height: 3em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 
   }
-  ul li a {
-    float: left;
-    padding: 15px;
 
+  li {
+    margin: auto;
+    padding: 1em;
+    width: 15%;
+    display: inline;
+  }
+
+  ul li a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
   div.content {margin-left: 0;}
 
@@ -143,6 +158,26 @@ p.top {
   background: #f1f1f1;
   border-radius: 1em;
 }
+
+/*----- login section -------*/
+
+#section #form {
+  padding-right: 20%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  height: 100vh;
+}
+
+form {
+  flex-basis: 30%;
+}
+
 
 
 
