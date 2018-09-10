@@ -8,7 +8,7 @@ function getQuestions() {
       data.forEach(function(question){
         output +=`
           <div class="question">
-            <h3> ${question.title}</h3>
+            <h3> ${question.message}</h3>
             <p> ${question.datetime}</p>
             <p> ${question.body}</p>
           </div>
