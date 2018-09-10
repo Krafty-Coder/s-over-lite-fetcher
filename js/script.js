@@ -1,14 +1,16 @@
-window.addEventListener('click', getQuestions);
+window.addEventListener('click', getPosts);
 
-function getQuestions() {
-  fetch('https://s-over-lite.herokuapp.com/api/v1/questions')
-  .then((res) => res.json())
+document.getElementById('get').addEventListener('click', getPosts)
+
+function getPosts() {
+  fetch('https://s-over-lite.herokuapp.com/api/v1/')
+    .then((res) => res.json())
     .then((data) => {
       let output = <h2> Questions </h2>;
-      data.forEach(function(question){
+      data.forEach(function(questions){
         output +=`
           <div class="question">
-            <h3> ${question.message}</h3>
+            <h3> ${question}</h3>
             <p> ${question.datetime}</p>
             <p> ${question.body}</p>
           </div>
