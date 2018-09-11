@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -7,18 +9,30 @@
   </head>
   <body>
     <script>
-    function event() {
-      window.open("/login")
+console.log("working");
+
+window.onload = function home(){
+  fetch("https://s-over-lite.herokuapp.com/", {
+    method: "GET",
+    headers:{
+      "Content-Type":"application/json"
     }
+  })
+  .then((response) => response.json())
+    .then((data)=>{
+      document.getElementById("output").innerHTML = data["message"]
+    })
+  .catch((err) => console.log(err))
+};
     </script>
-  <!--start of header/navbar-->
+    <!--start of header/navbar-->
     <header>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/dashboard.html">Dashboard</a></li>
-          <li><a href="/login.html">Login</a></li>
-          <li><a href="/signup.html">Signup</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Signup</a></li>
         </ul>
       </nav>
     </header>
@@ -27,10 +41,10 @@
     <div id="hero">
       <span class="one">
         <p class="top"> Stack overflow is a backup project under construction just as the normal <a href="https://stackoverflow.com"> stackoverflow </a></p>
-        <p> for posting questions and getting feedback ASAP from fellow developers</p>
+        <p id="output"> for posting questions and getting feedback ASAP from fellow developers</p>
         <span class="buttons">
-          <button onclick="event()">Log In</button>
-          <button onclick="event()">Sign In</button>
+          <button id="login">Log In</button>
+          <button id="signup">Sign In</button>
         </span>
       </span>
     </div>
@@ -43,11 +57,18 @@
     </footer>
     <!--end of footer-->
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+      document.getElementById('signup').addEventListener('click', goTo);
+      function goTo() {
+        window.location.href="signup.html";
+      }
+      document.getElementById('login').addEventListener('click', goTo);
+      function goTo() {
+        window.location.href="login.html";
+      }
+    </script>
     <script scr ="js/script.js"></script>
   </body>
 </html>
-
-
 
 
