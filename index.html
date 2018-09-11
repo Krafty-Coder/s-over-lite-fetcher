@@ -6,25 +6,9 @@
     <meta charset = "utf-8">
     <title>Home | Stackoverflow-lite</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
   </head>
   <body>
-    <script>
-console.log("working");
-
-window.onload = function home(){
-  fetch("https://s-over-lite.herokuapp.com/", {
-    method: "GET",
-    headers:{
-      "Content-Type":"application/json"
-    }
-  })
-  .then((response) => response.json())
-    .then((data)=>{
-      document.getElementById("output").innerHTML = data["message"]
-    })
-  .catch((err) => console.log(err))
-};
-    </script>
     <!--start of header/navbar-->
     <header>
       <nav>
@@ -67,7 +51,6 @@ window.onload = function home(){
         window.location.href="login.html";
       }
     </script>
-    <script scr ="js/script.js"></script>
   </body>
 </html>
 
