@@ -4,10 +4,10 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset = "utf-8">
+    <meta name="Viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <title>Dashboard | Stackoverflow-lite</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script scr ="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" scr="js/script.js"></script>
   </head>
   <body>
     <header>
@@ -21,8 +21,7 @@
       </nav>
     </header>
     <div id="section">
-      <button id="get"> Get Posts</button>
-      <div id="output">
+      <div id="output" onload="home()">
       </div>
       <div class="questions">
         <div class="heada" id="ref">
@@ -89,29 +88,7 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById('get').addEventListener('click', getPosts)
-
-      function getPosts() {
-        fetch('https://s-over-lite.herokuapp.com/api/v1/')
-          .then((res) => res.json())
-          .then((data) => {
-            let output = `<h2> Questions </h2>`;
-            data.forEach(function(questions){
-              output +=`
-                <div class="question">
-                <h3> ${question}</h3>
-                <p> ${question.datetime}</p>
-                <p> ${question.body}</p>
-                </div>
-                `;
-            });
-              document.getElementById('output').innerHTML = output;
-          })
-      }
-    </script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script scr ="js/script.js"></script>
+    <script type="text/javascript" scr="js/script.js"></script>
   </body>
 </html>
 

@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <script>
+console.log("working");
+
+window.onload = function home(){
+  fetch("https://s-over-lite.herokuapp.com/", {
+    method: "GET",
+    headers:{
+      "Content-Type":"application/json"
+    }
+  })
+  .then((response) => response.json())
+    .then((data)=>{
+      document.getElementById("output").innerHTML = data["message"]
+    })
+  .catch((err) => console.log(err))
+};
+    </script>
     <!--start of header/navbar-->
     <header>
       <nav>
@@ -24,7 +41,7 @@
     <div id="hero">
       <span class="one">
         <p class="top"> Stack overflow is a backup project under construction just as the normal <a href="https://stackoverflow.com"> stackoverflow </a></p>
-        <p> for posting questions and getting feedback ASAP from fellow developers</p>
+        <p id="output"> for posting questions and getting feedback ASAP from fellow developers</p>
         <span class="buttons">
           <button id="login">Log In</button>
           <button id="signup">Sign In</button>

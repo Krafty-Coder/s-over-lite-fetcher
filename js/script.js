@@ -1,22 +1,17 @@
-window.addEventListener('click', getPosts);
+console.log("working");
 
-document.getElementById('get').addEventListener('click', getPosts)
-
-function getPosts() {
-  fetch('https://s-over-lite.herokuapp.com/api/v1/')
-    .then((res) => res.json())
-    .then((data) => {
-      let output = <h2> Questions </h2>;
-      data.forEach(function(questions){
-        output +=`
-          <div class="question">
-            <h3> ${question}</h3>
-            <p> ${question.datetime}</p>
-            <p> ${question.body}</p>
-          </div>
-          `;
-      });
-      .catch((err) => console.log(err))
-      document.getElementById('output').innerHTML = output;
+window.onload = function home(){
+  fetch("https://gully.herokuapp.com/api/v1", {
+    method: "GET",
+    headers:{
+      "Content-Type":"application/json"
+    }
+  })
+    .then((response) => response.json())
+    .then((data)=>{
+      document.getElementById("output").innerHTML = data["message"]
     })
-}
+    .catch((err) => console.log(err))
+};
+
+
