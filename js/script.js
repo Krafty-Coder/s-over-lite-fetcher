@@ -1,5 +1,5 @@
 console.log("working");
-const route = `https://s-over-lite.herokuapp.com/`
+const route = `https://s-over-lite.herokuapp.com/`;
 
 window.onload = function home(){
   fetch( route, {
