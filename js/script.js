@@ -1,7 +1,8 @@
 console.log("working");
+const route = `https://s-over-lite.herokuapp.com/`
 
 window.onload = function home(){
-  fetch("https://s-over-lite.herokuapp.com/", {
+  fetch( route, {
     method: "GET",
     headers:{
       "Content-Type":"application/json"
@@ -16,7 +17,7 @@ window.onload = function home(){
 };
 
 window.onload = function questions() {
-  fetch("https://s-over-lite.herokuapp.com/api/v1/questions", {
+  fetch(route+`/api/v1/questions` , {
     method: "GET",
     headers:{
       "Content-Type":"application/json"
@@ -44,7 +45,7 @@ window.onload = function login() {
     })
   }
 
-  fetch(`https://s-over-lite.herokuapp.com/api/v1/login`, options)
+  fetch(route+`api/v1/login`, options)
   .then((response) => response.json())
     .then((data)=>{
       console.log(data["message"])
