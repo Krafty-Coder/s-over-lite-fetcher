@@ -1,8 +1,5 @@
-console.log("working");
-const route = `https://s-over-lite.herokuapp.com/`;
-
 window.onload = function home(){
-  fetch( route, {
+  fetch( "https://s-over-lite.herokuapp.com/", {
     method: "GET",
     headers:{
       "Content-Type":"application/json"
@@ -10,14 +7,14 @@ window.onload = function home(){
   })
   .then((response) => response.json())
     .then((data)=>{
-      document.getElementById("output").innerHTML = data["message"]
+      document.getElementById("output").innerHTML = data["message"];
     })
   .catch((err) => console.log(err));
   console.log('home query initiated');
 };
 
-window.onload = function questions() {
-  fetch(route+`/api/v1/questions` , {
+function questions() {
+  fetch("https://s-over-lite.herokuapp.com/api/v1/questions" , {
     method: "GET",
     headers:{
       "Content-Type":"application/json"
@@ -31,7 +28,7 @@ window.onload = function questions() {
   console.log('questions query initiated');
 }
 
-window.onload = function login() {
+function login() {
   const newUser = {
     'username': document.getElementById('username').value,
     'password': document.getElementById('password').value
@@ -45,7 +42,7 @@ window.onload = function login() {
     })
   }
 
-  fetch(route+`api/v1/login`, options)
+  fetch("https://s-over-lite.herokuapp.com/api/v1/login", options)
   .then((response) => response.json())
     .then((data)=>{
       console.log(data["message"])
